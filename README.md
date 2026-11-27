@@ -1,17 +1,23 @@
-This is your group repo for your final project for COGS108.
+# Long Beach Pet Shelter Analysis
 
-This repository is private, and is only visible to the course instructors and your group mates; it is not visible to anyone else.
+For a Fall 2025 team data science project at UC San Diego, we cleaned and analyzed 34,468 Long Beach animal shelter records from 2016 to 2025. We used exploratory data analysis and predictive modeling to examine how characteristics such as age, species, and spay/neuter status relate to whether cats and dogs are adopted and how long adoption takes.
 
-Template notebooks for each component are provided. The numbers on the notebook filenames provides the order things are due.  See the syllabus for the due dates in your quarter.
+## Research Question
 
-You will be graded based solely on the numbered Jupyter notebooks in this repository.  You will recieve your grade and feedback on how to improve via GitHub Issues on this repository. 
+How do animal characteristics and listing features influence the likelihood and speed of adoption for cats and dogs in Long Beach?
 
-We have created a suggested organization for your repo, including directory structures for storing `./data`, `./results`, and for creating `./modules` that your notebooks can import. 
+## Features of Interest
 
-Its worth noting that `./data` is for storing local copies of the data, but by default this repo is configured to **not** allow you to store common datafiles in GitHub.  This is because GitHub has low limits on maximum file and repo size.  So instead you would download your data direct from its original provider or from your personal cloud storage. There are scripts inside some of the notebooks to download data from any URL to `./data`.  If you wish to remove this limitation and store small data files directly in your GitHub you should edit your `.gitignore` file.
+- **Animal characteristics:** Species, age, sex, size, breed, coat color, and spay/neuter status.
+- **Behavioral traits:** House-training and compatibility with dogs, cats, and children.
+- **Listing features:** Distance, number of photos, and publication date.
 
-But this is *your* repo. You are free to manage the repo as you see fit, edit this README, add data files anywhere you want, etc. So long as there are the four numbered Jupyter notebooks in place on the due dates with the required information, the rest is up to you. 
+## Analysis
 
-At the final project date there is an option to make your final project visible to others.  If you choose this option your repo will become publicly visible. 
+- **Species, age, and sex:** Dogs had a higher adoption rate than cats (62% vs. 34%). Senior animals had the highest observed adoption rate, contrary to our initial hypothesis. Adoption rates were similar for males and females.
+- **Spay/neuter status and intake condition:** Spayed or neutered animals had a 67% adoption rate, compared with 26% for unsterilized animals. Animals recorded as feral, severely ill, or underweight at intake had some of the lowest adoption rates.
+- **Linear regression:** We used a multivariable linear regression model to estimate how each feature was associated with adoption likelihood while accounting for the other features in the model. Intake condition and intake type showed the strongest associations, and spay/neuter status was also an important predictor. The “Intake Exam” category had the largest positive coefficient, while “Feral” and “Fractious” had large negative coefficients. Age and sex showed weaker associations after accounting for the other variables.
 
-Also, you are encouraged to share this project after the course and to add it to your portfolio. If your repo is public you may fork it. If it is private you may follow [these instructions](https://docs.google.com/document/d/1_PP-vlsyWjNegGGsmeDB5B-ltjYW1Db14q9dx3HM9e4/edit?usp=sharing)
+## Project Notebook
+
+See the [final project notebook](03-FinalProject.ipynb) for the full report, including visualizations, linear regression results, and conclusions.## Project Notebook

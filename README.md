@@ -20,4 +20,4 @@ How do animal characteristics and listing features influence the likelihood and 
 
 ## Project Notebook
 
-See the [final project notebook](03-FinalProject.ipynb) for the full report, including visualizations, linear regression results, and conclusions.## Project Notebook
+See the [final project notebook](03-FinalProject.ipynb) for the full report, including visualizations, linear regression results, and conclusions.
